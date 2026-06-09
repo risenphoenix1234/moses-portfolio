@@ -1,109 +1,192 @@
-// components/Hero.tsx
+"use client";
 
-export default function Hero() {
+import Image from "next/image";
+import { useEffect } from "react";
+
+function useScrollReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll("[data-reveal]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target as HTMLElement;
+            const delay = el.dataset.delay ?? "0";
+            setTimeout(() => {
+              el.classList.add("revealed");
+            }, Number(delay));
+            observer.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
+
+export default function HeroSection() {
+  useScrollReveal();
+
+  const scrollToFooter = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const footer = document.querySelector("footer");
+    if (footer) {
+      footer.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section
-      className="relative min-h-[84vh] flex flex-col items-center justify-center text-center px-6 py-20 overflow-hidden"
-      style={{ background: 'linear-gradient(145deg, #edfaf5 0%, #f4faf8 45%, #eef6ff 100%)' }}
-    >
-      {/* Orbs */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 rounded-full blur-[80px] -top-20 -left-20"
-          style={{ background: '#05b083', opacity: 0.13 }} />
-        <div className="absolute w-80 h-80 rounded-full blur-[70px] -bottom-16 -right-16"
-          style={{ background: '#2563eb', opacity: 0.10 }} />
-        <div className="absolute w-64 h-64 rounded-full blur-[60px] top-1/2 left-[60%] -translate-x-1/2 -translate-y-1/2"
-          style={{ background: '#05b083', opacity: 0.07 }} />
-      </div>
+    <>
+      <style>{`
+        [data-reveal] {
+          opacity: 0;
+          transform: translateY(28px);
+          transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        [data-reveal="fade-left"] { transform: translateX(-32px); }
+        [data-reveal="fade-right"] { transform: translateX(32px); }
+        [data-reveal="scale"] { transform: scale(0.94); }
+        [data-reveal].revealed {
+          opacity: 1;
+          transform: translateY(0) translateX(0) scale(1);
+        }
 
-      {/* Live badge */}
-      <div
-        className="relative z-10 inline-flex items-center gap-2 text-xs font-semibold px-4 py-1.5 rounded-full mb-7"
-        style={{ background: '#e6f8f4', border: '1px solid rgba(5,176,131,0.3)', color: '#038a67' }}
+        @keyframes pulse-dot {
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.5; transform: scale(1.4); }
+        }
+        .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+        @keyframes float-badge {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-6px); }
+        }
+        .float-badge { animation: float-badge 3.5s ease-in-out infinite; }
+
+        @keyframes shimmer-btn {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+        .btn-primary {
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-primary:hover {
+          background: linear-gradient(90deg, #111 0%, #444 40%, #111 60%, #000 100%);
+          background-size: 200% auto;
+          animation: shimmer-btn 1.2s linear infinite;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        }
+        .btn-accent {
+          transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+        }
+        .btn-accent:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 20px rgba(200, 241, 53, 0.45);
+          filter: brightness(1.08);
+        }
+        .img-wrapper {
+          transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .img-wrapper:hover { transform: scale(1.02); }
+      `}</style>
+
+      <main
+        className="font-sans bg-repeat overflow-hidden"
+        style={{ backgroundImage: "url('/pattern1.jpg')", backgroundSize: "300px" }}
       >
-        <span className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#05b083' }} />
-        Live at 12+ universities across Nigeria
-      </div>
+        <section className="max-w-[1280px] mx-auto px-6 md:px-10 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-12">
 
-      {/* Headline */}
-      <h1
-        className="relative z-10 text-5xl md:text-7xl leading-[1.05] tracking-tight max-w-2xl mb-5"
-        style={{ fontFamily: '"Instrument Serif", serif', color: '#0f1f1a' }}
-      >
-        Your campus<br />
-        <em style={{ color: '#05b083', fontStyle: 'italic' }}>marketplace,</em><br />
-        simplified.
-      </h1>
+          {/* LEFT */}
+          <div className="flex-1 text-center md:text-left">
 
-      <p className="relative z-10 text-base max-w-md leading-relaxed mb-8" style={{ color: '#4b6b62' }}>
-        Buy, sell, and swap with students at your uni — textbooks, gadgets, fashion, food, and more.
-      </p>
-
-      {/* Search bar */}
-      <div
-        className="relative z-10 flex w-full max-w-[500px] rounded-full overflow-hidden mb-6"
-        style={{
-          background: 'white',
-          border: '1.5px solid #c8ede5',
-          boxShadow: '0 4px 20px rgba(5,176,131,0.10)',
-        }}
-      >
-        <input
-          type="text"
-          placeholder="Search for textbooks, earbuds, hoodies…"
-          className="flex-1 outline-none px-5 py-3 text-sm bg-transparent"
-          style={{ color: '#0f1f1a', fontFamily: '"DM Sans", sans-serif' }}
-        />
-        <button
-          className="m-1.5 text-sm font-semibold text-white px-5 py-2 rounded-full transition-opacity hover:opacity-90"
-          style={{ background: '#05b083' }}
-        >
-          Search
-        </button>
-      </div>
-
-      {/* CTA buttons */}
-      <div className="relative z-10 flex flex-wrap gap-3 justify-center mb-14">
-        <button
-          className="text-sm font-semibold text-white px-7 py-3 rounded-full hover:-translate-y-0.5 transition-all"
-          style={{ background: '#05b083', boxShadow: '0 4px 18px rgba(5,176,131,0.30)' }}
-        >
-          Start Selling →
-        </button>
-        <button
-          className="text-sm font-medium px-7 py-3 rounded-full transition-all hover:bg-[#e6f8f4]"
-          style={{ background: 'white', border: '1.5px solid #c8ede5', color: '#0f1f1a' }}
-        >
-          Browse Deals
-        </button>
-      </div>
-
-      {/* Stats strip */}
-      <div
-        className="relative z-10 flex flex-wrap gap-10 justify-center pt-8"
-        style={{ borderTop: '1px solid #c8ede5' }}
-      >
-        {[
-          { num: '4,200+', label: 'Active Listings' },
-          { num: '12',     label: 'Universities' },
-          { num: '8,500+', label: 'Students' },
-        ].map((s) => (
-          <div key={s.label} className="text-center">
-            <span
-              className="block leading-none mb-1"
-              style={{ fontFamily: '"Instrument Serif", serif', fontSize: '2rem', color: '#0f1f1a' }}
+            <div
+              data-reveal="fade-left"
+              data-delay="0"
+              className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm mb-8"
+              style={{ border: "1px solid #C8F135", color: "#5A5A3A" }}
             >
-              {s.num}
-            </span>
-            <span
-              className="text-[0.72rem] font-semibold uppercase tracking-widest"
-              style={{ color: '#4b6b62' }}
+              👋 Hi, Aniebiet Moses Here
+            </div>
+
+            <h1
+              data-reveal="fade-left"
+              data-delay="100"
+              className="text-[2rem] md:text-[2.9rem] leading-[1.2] font-black mb-6 tracking-tight"
+              style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D" }}
             >
-              {s.label}
-            </span>
+              A <span style={{ color: "#ABABC0" }}>creative product designer</span>
+              <br />
+              who creates user experiences that
+              <br />
+              solve real problems and drive results.
+            </h1>
+
+            <p
+              data-reveal="fade-left"
+              data-delay="200"
+              className="text-base max-w-md leading-relaxed mb-8 mx-auto md:mx-0"
+              style={{ color: "#6B6B6B" }}
+            >
+              I help brands turn ideas into well-crafted digital products through
+              clean, strategic, and user-focused design.
+            </p>
+
+            <div
+              data-reveal="fade-left"
+              data-delay="320"
+              className="flex items-center justify-center md:justify-start gap-4"
+            >
+              
+               <a href="#footer"
+                onClick={scrollToFooter}
+                className="btn-primary text-white text-sm font-semibold px-7 py-3 rounded-full bg-black"
+              >
+                Contact Me
+              </a>
+              
+               <a href="/projects"
+                className="btn-accent text-black text-sm font-semibold px-7 py-3 rounded-full"
+                style={{ backgroundColor: "#C8F135" }}
+              >
+                View Projects
+              </a>
+            </div>
           </div>
-        ))}
-      </div>
-    </section>
-  )
+
+          {/* RIGHT */}
+          <div
+            data-reveal="fade-right"
+            data-delay="150"
+            className="relative w-full md:w-[600px] md:max-w-none shrink-0 mt-6 md:mt-0"
+          >
+            <div className="float-badge absolute top-4 left-0 md:left-[-20px] z-20 flex items-center gap-2 bg-white border border-gray-200 shadow-sm rounded-full px-4 py-2 text-sm">
+              <span className="pulse-dot w-2.5 h-2.5 rounded-full bg-lime-400" />
+              Available for work
+            </div>
+
+            <div className="pt-10">
+              <div
+                data-reveal="scale"
+                data-delay="250"
+                className="img-wrapper relative w-full h-[320px] sm:h-[400px] md:h-[560px] rounded-3xl overflow-hidden"
+              >
+                <Image
+                  src="/moses.png"
+                  alt="Aniebiet Moses"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </main>
+    </>
+  );
 }

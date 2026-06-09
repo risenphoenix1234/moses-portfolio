@@ -2,10 +2,10 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Categories from '../components/Categories'
-import HowItWorks from '../components/Howitworks'
-import FreshListings from '../components/Freshlistings'
+import HowItWorks from '../components/About'
+import FreshListings from '../components/mydesign'
 import Testimonials from '../components/Testimonials'
-import CTABanner from '../components/CTABanner'
+ 
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
         <HowItWorks />
         <FreshListings />
         <Testimonials />
-        <CTABanner />
+    
       </main>
       <Footer />
     </>
