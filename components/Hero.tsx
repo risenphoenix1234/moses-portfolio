@@ -168,7 +168,7 @@ export default function HeroSection() {
           < div
             data-reveal="fade-right"
             data-delay="250"
-            className="relative bg-white border border-gray-200 shadow-sm rounded-2xl w-full md:w-[39.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0   justify-center"
+            className="relative bg-white border border-gray-200 drop-shadow-sm rounded-xl w-full md:w-[39.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0   justify-center"
           >
 
             {/* Floating Badge */}
