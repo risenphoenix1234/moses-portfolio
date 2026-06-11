@@ -11,7 +11,7 @@ export default function LogaDashProject() {
     }
   };
 
-  return (  <div className="bg-white">
+  return (<div className="bg-white">
     <main className="font-sans bg-white min-h-screen max-w-[1280px] mx-auto px-10 py-12">
 
       <Link
@@ -44,17 +44,20 @@ export default function LogaDashProject() {
         ))}
       </div>
 
-      <p className="text-sm font-bold text-gray-900 mb-10">
-        {"View Figma Design: "}
-        
+      <div className="mb-6">
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-1">
+          {"View Figma Design: "}
+    
+        </h1>
           <a href="https://www.figma.com/design/he0KhQlJtuuB1MVE9AbeDV/Food-Delivery-App?node-id=0-1&t=5f9R8YE1xVZuBZTD-1"
-          className="text-blue-500 font-normal break-all"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://www.figma.com/design/he0KhQlJtuuB1MVE9AbeDV/Food-Delivery-App?node-id=0-1&t=5f9R8YE1xVZuBZTD-1
-        </a>
-      </p>
+            className="text-gray-500 font-normal break-all"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://www.figma.com/design/he0KhQlJtuuB1MVE9AbeDV/Food-Delivery-App?node-id=0-1&t=5f9R8YE1xVZuBZTD-1
+          </a>
+      </div>
+
 
       <div className="w-full rounded-2xl overflow-hidden mb-12">
         <Image
@@ -238,8 +241,8 @@ export default function LogaDashProject() {
           operators.
         </p>
       </section>
-       <div className="w-full rounded-2xl overflow-hidden mb-12">
-              <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
+      <div className="w-full rounded-2xl overflow-hidden mb-12">
+        <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
         <Image
           src="/da6.png"
           alt="LogaDash Media Gallery"
@@ -250,6 +253,6 @@ export default function LogaDashProject() {
       </div>
 
     </main>
-    </div>
+  </div>
   );
 }

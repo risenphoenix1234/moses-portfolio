@@ -47,17 +47,21 @@ export default function ProofboardProject() {
           ))}
         </div>
 
-        <p className="text-sm font-bold text-gray-900 mb-10">
-          View Figma Design:{" "}
+        <div className="mb-6">
+          <h1 className="text-3xl font-extrabold text-gray-900 mb-1">
+            View Figma Design:{" "}
+
+          </h1>
           <a
             href="https://www.figma.com/design/Hoyb8k45JKmpgnEz6wRRaB/Untitled?node-id=38-1407"
-            className="text-blue-500 font-normal break-all"
+            className="text-gray-500 font-normal break-all"
             target="_blank"
             rel="noreferrer"
           >
             https://www.figma.com/design/Hoyb8k45JKmpgnEz6wRRaB/Untitled
           </a>
-        </p>
+        </div>
+
 
         {/* IMAGE 1 */}
         <div className="w-full rounded-2xl overflow-hidden mb-12">
@@ -68,8 +72,8 @@ export default function ProofboardProject() {
         <section id="overview" className="mb-12">
           <h2 className="text-2xl font-black text-gray-900 mb-4">Overview</h2>
           <p className="text-base text-gray-600 leading-relaxed">
-            Proofboard is a SaaS platform that helps freelancers showcase verified proof of their work to potential clients. 
-            Instead of traditional portfolios, it highlights deliverable results with tailored testimonials, 
+            Proofboard is a SaaS platform that helps freelancers showcase verified proof of their work to potential clients.
+            Instead of traditional portfolios, it highlights deliverable results with tailored testimonials,
             giving clients confidence in a freelancer's ability to deliver.
           </p>
         </section>
@@ -193,7 +197,7 @@ export default function ProofboardProject() {
           </ul>
 
           <p className="text-base text-gray-600 leading-relaxed">
-            Proofboard shifts freelancers from static portfolios to structured proof-driven storytelling 
+            Proofboard shifts freelancers from static portfolios to structured proof-driven storytelling
             that builds trust and drives decisions.
           </p>
         </section>

@@ -11,7 +11,7 @@ export default function SafeNaijaProject() {
     }
   };
 
-  return (  <div className="bg-white">
+  return (<div className="bg-white">
     <main className="font-sans bg-white min-h-screen max-w-[1280px] mx-auto px-10 py-12">
 
       <Link
@@ -44,17 +44,18 @@ export default function SafeNaijaProject() {
         ))}
       </div>
 
-      <p className="text-sm font-bold text-gray-900 mb-10">
-        {"View Figma Design: "}
-        
-          <a href="https://www.figma.com/design/dIImkcg7IOHx1LilSEDTzA/Safenija?node-id=0-1&t=hItYU7X2G0xisaEW-1"
-          className="text-blue-500 font-normal break-all"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://www.figma.com/design/...
-        </a>
-      </p>
+      <div className="mb-6">
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-1">
+          {"View Figma Design: "}
+        </h1>
+        <a href="https://www.figma.com/design/dIImkcg7IOHx1LilSEDTzA/Safenija?node-id=0-1&t=hItYU7X2G0xisaEW-1"
+            className="text-gray-500 font-normal break-all"
+            target="_blank"
+            rel="noreferrer"
+          >
+            https://www.figma.com/design/...
+          </a>
+      </div>
 
       <div className="w-full rounded-2xl overflow-hidden mb-12">
         <Image
@@ -70,8 +71,8 @@ export default function SafeNaijaProject() {
       <section id="overview" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Overview</h2>
         <p className="text-base text-gray-600 leading-relaxed">
-          SafeNaija is a security-focused platform that helps users stay informed and protected by providing 
-          real-time safety alerts, location-based updates, and emergency support tools. It empowers individuals 
+          SafeNaija is a security-focused platform that helps users stay informed and protected by providing
+          real-time safety alerts, location-based updates, and emergency support tools. It empowers individuals
           and communities with timely information to make safer decisions in their daily lives.
         </p>
       </section>
@@ -80,7 +81,7 @@ export default function SafeNaijaProject() {
       <section id="problem" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Problem</h2>
         <p className="text-base text-gray-600 leading-relaxed mb-6">
-          Personal and community safety can be unpredictable, and people often lack immediate access to 
+          Personal and community safety can be unpredictable, and people often lack immediate access to
           reliable information during critical situations.
         </p>
         <p className="text-sm font-bold text-gray-900 mb-3">Key Constraints:</p>
@@ -225,13 +226,13 @@ export default function SafeNaijaProject() {
 
         <p className="text-sm font-bold text-gray-900 mb-2">Impact</p>
         <p className="text-base text-gray-600 leading-relaxed">
-          SafeNaija empowers users with timely and reliable safety information, helping them stay alert, 
+          SafeNaija empowers users with timely and reliable safety information, helping them stay alert,
           respond quickly, and make safer decisions in their everyday lives.
         </p>
       </section>
 
-       <div className="w-full rounded-2xl overflow-hidden mb-12">
-              <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
+      <div className="w-full rounded-2xl overflow-hidden mb-12">
+        <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
         <Image
           src="/sn6.png"
           alt="Media Gallery"
@@ -242,6 +243,6 @@ export default function SafeNaijaProject() {
       </div>
 
     </main>
-    </div>
+  </div>
   );
 }

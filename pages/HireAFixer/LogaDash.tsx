@@ -11,7 +11,7 @@ export default function LogaDashProject() {
     }
   };
 
-  return (  <div className="bg-white">
+  return (<div className="bg-white">
     <main className="font-sans bg-white min-h-screen max-w-[1280px] mx-auto px-10 py-12">
 
       <Link
@@ -44,17 +44,19 @@ export default function LogaDashProject() {
         ))}
       </div>
 
-      <p className="text-sm font-bold text-gray-900 mb-10">
-        {"View Figma Design: "}
-        
-          <a href="https://www.figma.com/design/4PdgXX2yc0qqujAMx4UglX/Profixer-Project?node-id=0-1&t=UOLgKi0MMHiwuBCC-1"
-          className="text-blue-500 font-normal break-all"
+      <div className="mb-8">
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-1">
+          {"View Figma Design: "}
+        </h1>
+        <a href="https://www.figma.com/design/4PdgXX2yc0qqujAMx4UglX/Profixer-Project?node-id=0-1&t=UOLgKi0MMHiwuBCC-1"
+          className="text-gray-600 font-normal break-all"
           target="_blank"
           rel="noreferrer"
         >
           https://www.figma.com/design/4PdgXX2yc0qqujAMx4UglX/Profixer-Project?node-id=0-1&t=1FIc5lOFaqsfKXmi-1
         </a>
-      </p>
+      </div>
+
 
       <div className="w-full rounded-2xl overflow-hidden mb-12">
         <Image
@@ -70,8 +72,8 @@ export default function LogaDashProject() {
       <section id="overview" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Overview</h2>
         <p className="text-base text-gray-600 leading-relaxed">
-          HireAfixer is a platform that connects users with verified service providers for home repairs 
-          and small tasks, ensuring quality work and reliable payments. The app simplifies hiring, 
+          HireAfixer is a platform that connects users with verified service providers for home repairs
+          and small tasks, ensuring quality work and reliable payments. The app simplifies hiring,
           tracking, and payment processes for both customers and service providers.
         </p>
       </section>
@@ -80,7 +82,7 @@ export default function LogaDashProject() {
       <section id="problem" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Problem</h2>
         <p className="text-base text-gray-600 leading-relaxed mb-6">
-          People often struggle to find trustworthy professionals for home repairs or small tasks, 
+          People often struggle to find trustworthy professionals for home repairs or small tasks,
           leading to delays, poor quality work, or payment issues.
         </p>
         <p className="text-sm font-bold text-gray-900 mb-3">Key Constraints:</p>
@@ -175,7 +177,7 @@ export default function LogaDashProject() {
       <section id="execution" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Execution</h2>
         <p className="text-base text-gray-600 leading-relaxed mb-6">
-          The HireAfixer platform was designed through a structured process focused on usability, clarity, 
+          The HireAfixer platform was designed through a structured process focused on usability, clarity,
           and efficiency for both users and service providers.
         </p>
         <ul className="space-y-2">
@@ -226,13 +228,13 @@ export default function LogaDashProject() {
 
         <p className="text-sm font-bold text-gray-900 mb-2">Impact</p>
         <p className="text-base text-gray-600 leading-relaxed">
-          HireAfixer improves how people handle everyday service needs by making the process faster, 
+          HireAfixer improves how people handle everyday service needs by making the process faster,
           more transparent, and more reliable for both users and service providers.
         </p>
       </section>
 
-       <div className="w-full rounded-2xl overflow-hidden mb-12">
-              <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
+      <div className="w-full rounded-2xl overflow-hidden mb-12">
+        <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
         <Image
           src="/hf6.png"
           alt="Media Gallery"
@@ -243,6 +245,6 @@ export default function LogaDashProject() {
       </div>
 
     </main>
-    </div>
+  </div>
   );
 }

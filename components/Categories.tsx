@@ -96,13 +96,13 @@ export default function SkillsSection() {
       <div className="max-w-[1280px] mx-auto px-8 sm:px-6 md:px-10 py-12 md:py-20 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
         {/* Left: heading */}
-        <div className="w-full lg:w-[340px] lg:shrink-0 lg:sticky lg:top-24 flex flex-col gap-4">
+        <div className="w-full lg:w-[35%] lg:shrink-0 lg:sticky md:items-center lg:top-24 flex flex-col gap-4">
           <h2
-  className="text-2xl sm:text-3xl md:text-[2.6rem] font-black leading-[1.2] tracking-[-0.01em] mb-2 md:mb-5 word-spacing-wide"
-  style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D", wordSpacing: "0.15em" }}
->
-  A comprehensive look at what I deliver and how I deliver
-</h2>
+            className="text-2xl sm:text-3xl md:text-[2.6rem] font-black md:leading-10 leading-[1.5] tracking-[-0.01em] mb-2 md:mb-5 word-spacing-wide"
+            style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D", wordSpacing: "0.15em" }}
+          >
+            A comprehensive look at what I deliver and how  I deliver
+          </h2>
           <p className="text-sm leading-relaxed" style={{ color: "#6B6B6B" }}>
             A closer look at what I design and the thoughtful process behind how it all comes together.
           </p>

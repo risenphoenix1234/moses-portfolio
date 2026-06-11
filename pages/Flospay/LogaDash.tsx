@@ -11,7 +11,7 @@ export default function FlosPayProject() {
     }
   };
 
-  return (  <div className="bg-white">
+  return (<div className="bg-white">
     <main className="font-sans bg-white min-h-screen max-w-[1280px] mx-auto px-10 py-12">
 
       <Link
@@ -44,17 +44,21 @@ export default function FlosPayProject() {
         ))}
       </div>
 
-      <p className="text-sm font-bold text-gray-900 mb-10">
-        {"View Figma Design: "}
-        
-          <a href="https://www.figma.com/design/xQXWPPKvvPqDov8RskPIMP/Flospay-Main?node-id=0-1&t=KaVBiuIXKt628Nf9-1"
-          className="text-blue-500 font-normal break-all"
+      <div className="mb-6">
+
+        <h1 className="text-3xl font-extrabold text-gray-900 mb-1">
+          {"View Figma Design: "}
+        </h1>
+        <a href="https://www.figma.com/design/xQXWPPKvvPqDov8RskPIMP/Flospay-Main?node-id=0-1&t=KaVBiuIXKt628Nf9-1"
+          className="text-gray-500 font-normal break-all"
           target="_blank"
           rel="noreferrer"
         >
           https://www.figma.com/design/uxXWPPVKRvfqDovR8skPIM/Flospay-Main
         </a>
-      </p>
+
+      </div>
+
 
       <div className="w-full rounded-2xl overflow-hidden mb-12">
         <Image
@@ -70,9 +74,9 @@ export default function FlosPayProject() {
       <section id="overview" className="mb-12">
         <h2 className="text-2xl font-black text-gray-900 mb-4">Overview</h2>
         <p className="text-base text-gray-600 leading-relaxed">
-          FlosPay is a fintech app that enables users to save, send payments, and create payment links with ease. 
-          It also supports group savings through Esusu, where participants contribute regularly and take turns 
-          accessing the pooled funds. The app simplifies personal and corporate financial management, making 
+          FlosPay is a fintech app that enables users to save, send payments, and create payment links with ease.
+          It also supports group savings through Esusu, where participants contribute regularly and take turns
+          accessing the pooled funds. The app simplifies personal and corporate financial management, making
           payments and saving transparent and effortless.
         </p>
       </section>
@@ -226,13 +230,13 @@ export default function FlosPayProject() {
 
         <p className="text-sm font-bold text-gray-900 mb-2">Impact</p>
         <p className="text-base text-gray-600 leading-relaxed">
-          FlosPay makes managing money simpler, more transparent, and more accessible, helping users 
+          FlosPay makes managing money simpler, more transparent, and more accessible, helping users
           confidently handle both personal and group finances.
         </p>
       </section>
 
-       <div className="w-full rounded-2xl overflow-hidden mb-12">
-              <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
+      <div className="w-full rounded-2xl overflow-hidden mb-12">
+        <h2 className="text-2xl font-black text-gray-900 mb-6">Media Gallery</h2>
         <Image
           src="/fp6.png"
           alt="Media Gallery"
@@ -243,6 +247,6 @@ export default function FlosPayProject() {
       </div>
 
     </main>
-    </div>
+  </div>
   );
 }

@@ -104,10 +104,10 @@ export default function HeroSection() {
         style={{ backgroundImage: "url('/pattern1.jpg')", backgroundSize: "300px" }}
       >
 
-        <section className="max-w-[1920px] mx-auto px-6 md:px-10 py-16 md:py-24 flex flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
+        <section className="max-w-[1920px] mx-auto px-6 md:px-24 py-16 md:pt-24 flex flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
 
           {/* LEFT */}
-          <div className="flex-1 text-center md:w-[49.3%] md:text-left">
+          <div className="flex-1 text-center md:px-10 md:w-[49.3%] md:text-left">
 
             <div
               data-reveal="fade-left"
@@ -124,7 +124,7 @@ export default function HeroSection() {
               className="text-[2rem] md:text-[2.9rem] leading-[1.2] font-black mb-6 tracking-tight"
               style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D" }}
             >
-              A <span style={{ color: "#ABABC0" }}>creative product designer</span>
+              A creative product designer
               <br />
               who creates user experiences that
               <br />
@@ -168,7 +168,7 @@ export default function HeroSection() {
           < div
             data-reveal="fade-right"
             data-delay="250"
-            className="relative bg-white border border-gray-200 drop-shadow-sm rounded-xl w-full md:w-[39.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0   justify-center"
+            className="relative bg-white border border-l-gray-50 drop-shadow-sm rounded-xl w-full md:w-[45.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0  justify-center"
           >
 
             {/* Floating Badge */}
@@ -191,7 +191,7 @@ export default function HeroSection() {
             </div>
 
             {/* Second Avatar */}
-           <div className="absolute w-[230px] h-[144px] left-[48%] top-[51%] md:left-[51%] md:top-[37%] md:w-[267.27px] md:h-[174px] overflow-hidden">
+           <div className="absolute w-[230px] h-[144px] left-[48%] top-[51%] md:left-[51%] md:top-[42%] md:w-[267.27px] md:h-[174px] overflow-hidden">
               <Image
                 src="/chris.png"
                 alt="Mr. Chris"
