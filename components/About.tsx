@@ -117,7 +117,7 @@ export default function AboutExperienceSection() {
       `}</style>
 
       {/* ── ABOUT ME ── */}
-      <section className="max-w-[1280px] mx-auto px-6 md:px-10 py-12 md:py-20 flex flex-col md:flex-row gap-10 md:gap-20 items-start">
+      <section className="max-w-[1280px] mx-auto px-10 md:px-10 py-12 md:py-20 flex flex-col md:flex-row gap-10 md:gap-20 items-start">
 
         {/* Left: heading */}
         <div
@@ -161,12 +161,12 @@ export default function AboutExperienceSection() {
 
           <div data-reveal="fade-right" data-delay="280">
             <button
-              className="about-btn flex items-center gap-2 text-white text-sm font-semibold px-5 py-2.5 rounded-full"
+              className="about-btn flex items-center gap-2  text-white text-sm font-semibold px-5 py-2.5 rounded-full"
               style={{ backgroundColor: "#0D0D0D" }}
             >
             <a href="/about">  About Me
               <span
-                className="w-3 h-3 rounded-full inline-block"
+                className="w-3 h-3 rounded-full ml-3 inline-block"
                 style={{ backgroundColor: "#C8F135" }}
               />
               </a>

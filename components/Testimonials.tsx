@@ -142,7 +142,7 @@ export default function TestimonialsAndCTA() {
       `}</style>
 
       {/* ── TESTIMONIALS ── */}
-      <section className="w-full py-14 md:py-20 px-6 md:px-10 bg-[#0D0D0D]">
+      <section className="w-full py-14 md:py-20 px-10 md:px-10 bg-[#0D0D0D]">
         <div className="max-w-[1280px] mx-auto">
 
           <p
@@ -192,7 +192,7 @@ export default function TestimonialsAndCTA() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="w-full px-4 md:px-10 py-10 md:py-14 bg-white">
+      <section className="w-full px-8 md:px-10 py-10 md:py-14 bg-white">
         <div className="max-w-[1280px] mx-auto">
           <div
             className="rv rounded-3xl bg-[#1A1A1A] relative overflow-hidden min-h-[300px] flex items-center justify-center px-6 py-12 md:py-16"

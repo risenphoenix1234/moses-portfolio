@@ -1,4 +1,6 @@
 "use client";
+import type { MouseEvent } from "react";
+import profileImg from "../public/group-profile.png";
 
 import Image from "next/image";
 import { useEffect } from "react";
@@ -39,7 +41,8 @@ export default function HeroSection() {
 
   return (
     <>
-      <style>{`
+      <style>
+        {`
         [data-reveal] {
           opacity: 0;
           transform: translateY(28px);
@@ -92,16 +95,19 @@ export default function HeroSection() {
           transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .img-wrapper:hover { transform: scale(1.02); }
-      `}</style>
+      `}
+
+      </style>
 
       <main
         className="font-sans bg-repeat overflow-hidden"
         style={{ backgroundImage: "url('/pattern1.jpg')", backgroundSize: "300px" }}
       >
-        <section className="max-w-[1280px] mx-auto px-6 md:px-10 py-16 md:py-24 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-12">
+
+        <section className="max-w-[1920px] mx-auto px-6 md:px-10 py-16 md:py-24 flex flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
 
           {/* LEFT */}
-          <div className="flex-1 text-center md:text-left">
+          <div className="flex-1 text-center md:w-[49.3%] md:text-left">
 
             <div
               data-reveal="fade-left"
@@ -140,15 +146,15 @@ export default function HeroSection() {
               data-delay="320"
               className="flex items-center justify-center md:justify-start gap-4"
             >
-              
-               <a href="#footer"
+
+              <a href="#footer"
                 onClick={scrollToFooter}
                 className="btn-primary text-white text-sm font-semibold px-7 py-3 rounded-full bg-black"
               >
                 Contact Me
               </a>
-              
-               <a href="/projects"
+
+              <a href="/projects"
                 className="btn-accent text-black text-sm font-semibold px-7 py-3 rounded-full"
                 style={{ backgroundColor: "#C8F135" }}
               >
@@ -157,32 +163,60 @@ export default function HeroSection() {
             </div>
           </div>
 
+
           {/* RIGHT */}
-          <div
+          < div
             data-reveal="fade-right"
-            data-delay="150"
-            className="relative w-full md:w-[600px] md:max-w-none shrink-0 mt-6 md:mt-0"
+            data-delay="250"
+            className="relative bg-white border border-gray-200 shadow-sm rounded-2xl w-full md:w-[39.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0   justify-center"
           >
-            <div className="float-badge absolute top-4 left-0 md:left-[-20px] z-20 flex items-center gap-2 bg-white border border-gray-200 shadow-sm rounded-full px-4 py-2 text-sm">
+
+            {/* Floating Badge */}
+            <div className="float-badge absolute top-6 left-6 z-20 flex items-center gap-2 bg-white border border-gray-200 shadow-sm rounded-full px-4 py-2 text-sm">
               <span className="pulse-dot w-2.5 h-2.5 rounded-full bg-lime-400" />
               Available for work
             </div>
 
-            <div className="pt-10">
-              <div
-                data-reveal="scale"
-                data-delay="250"
-                className="img-wrapper relative w-full h-[320px] sm:h-[400px] md:h-[560px] rounded-3xl overflow-hidden"
-              >
-                <Image
-                  src="/moses.png"
-                  alt="Aniebiet Moses"
-                  fill
-                  className="object-cover"
-                  priority
-                />
-              </div>
+
+
+            {/* First Avatar */}
+              <div className="absolute top-[10%] left-[55%] md:top-[5%] md:left-[50%] -translate-x-1/2 w-[260.81px] h-[270px] rounded-full overflow-hidden border-none shadow-lg">
+              <Image
+                src="/moses.png"
+                alt="Aniebiet Moses"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
+
+            {/* Second Avatar */}
+           <div className="absolute w-[230px] h-[144px] left-[48%] top-[51%] md:left-[51%] md:top-[37%] md:w-[267.27px] md:h-[174px] overflow-hidden">
+              <Image
+                src="/chris.png"
+                alt="Mr. Chris"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+
+            <div className="absolute bottom-[10%] md:bottom-[10%] left-0 right-0 flex items-center justify-left ml-8 gap-3">
+              <p
+                className="text-base leading-relaxed"
+                style={{ color: "#6B6B6B" }}
+              >
+                Join 100s of satisfied clients
+              </p>
+              <Image
+                src={profileImg}
+                alt="group profile"
+                width={88}
+                height={32}
+              />
+            </div>
+
+
           </div>
 
         </section>

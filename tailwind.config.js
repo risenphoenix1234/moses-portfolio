@@ -34,6 +34,8 @@ module.exports = {
       fontFamily: {
         display: ['"Instrument Serif"', 'serif'],
         body:    ['"DM Sans"', 'sans-serif'],
+        anton: ['"Anton"', 'sans-serif'],
+        interTight: ['"Inter Tight"', 'sans-serif'],
       },
       borderRadius: {
         xl2: '18px',

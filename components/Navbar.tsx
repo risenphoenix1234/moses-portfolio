@@ -61,7 +61,7 @@ export default function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm text-gray-600 hover:text-gray-900 transition-colors duration-200 relative group"
+                className="text-sm text-gray-600  hover:text-gray-900 transition-colors duration-200 relative group"
               >
                 {link.label}
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gray-900 transition-all duration-300 group-hover:w-full" />

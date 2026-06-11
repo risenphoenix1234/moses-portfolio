@@ -38,7 +38,7 @@ export default function ProjectsSection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <div className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-12 py-12 font-sans">
+    <div className="w-full max-w-[1280px] mx-auto px-10 sm:px-6 md:px-12 py-12 font-sans">
 
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-7 gap-3 sm:gap-0">
@@ -58,7 +58,7 @@ export default function ProjectsSection() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
+      <div className="grid grid-cols-1 md:gap-10 sm:grid-cols-2 gap-12 sm:gap-3.5">
         {projects.map((p, i) => (
           <Link key={i} href={p.url} className="block">
             <div

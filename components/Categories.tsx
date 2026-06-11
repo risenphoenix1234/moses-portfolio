@@ -93,7 +93,7 @@ export default function SkillsSection() {
       </div>
 
       {/* ── MAIN CONTENT ── */}
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-10 py-12 md:py-20 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
+      <div className="max-w-[1280px] mx-auto px-8 sm:px-6 md:px-10 py-12 md:py-20 flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 
         {/* Left: heading */}
         <div className="w-full lg:w-[340px] lg:shrink-0 lg:sticky lg:top-24 flex flex-col gap-4">
@@ -109,7 +109,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Right: 2x2 grid */}
-        <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+        <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4">
           {services.map((s, i) => (
             <div
               key={i}
