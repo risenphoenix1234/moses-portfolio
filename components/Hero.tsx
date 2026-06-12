@@ -101,13 +101,18 @@ export default function HeroSection() {
 
       <main
         className="font-sans bg-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/pattern1.jpg')", backgroundSize: "300px" }}
+        style={{
+          backgroundImage: "url('/pattern1.jpg')",
+          backgroundSize: "300px",
+          backgroundColor: "#FBFFF4",
+          backgroundBlendMode: "multiply" // or "overlay" / "screen"
+        }}
       >
 
-        <section className="max-w-[1920px] mx-auto px-6 md:px-24 py-16 md:pt-24 flex flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
+        <section className="max-w-[1920px] mx-auto px-4 md:px-24 py-16 md:pt-24 flex sm:px-8 flex-col-reverse sm:flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
 
           {/* LEFT */}
-          <div className="flex-1 text-center md:px-10 md:w-[49.3%] md:text-left">
+          <div className="flex-1 text-center sm:mx-auto md:ml-8 sm:text-center md:px-10 md:w-[49.3%] md:text-left">
 
             <div
               data-reveal="fade-left"
@@ -124,10 +129,10 @@ export default function HeroSection() {
               className="text-[2rem] md:text-[2.9rem] leading-[1.2] font-black mb-6 tracking-tight"
               style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D" }}
             >
-              A creative product designer
-              <br />
+              A creative product <br />designer
+              
               who creates user experiences that
-              <br />
+        
               solve real problems and drive results.
             </h1>
 
@@ -168,7 +173,7 @@ export default function HeroSection() {
           < div
             data-reveal="fade-right"
             data-delay="250"
-            className="relative bg-white border border-l-gray-50 drop-shadow-sm rounded-xl w-full md:w-[45.2%] h-[622px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0  justify-center"
+            className="relative bg-[#FBFFF6] border border-l-gray-50 drop-shadow-sm rounded-xl w-full md:w-[45.2%] h-[600px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0  justify-center"
           >
 
             {/* Floating Badge */}
@@ -180,7 +185,7 @@ export default function HeroSection() {
 
 
             {/* First Avatar */}
-              <div className="absolute top-[10%] left-[55%] md:top-[5%] md:left-[50%] -translate-x-1/2 w-[260.81px] h-[270px] rounded-full overflow-hidden border-none shadow-lg">
+            <div className="absolute top-[10%] left-[50%] md:top-[5%] md:left-[50%] -translate-x-1/2 w-[260.81px] h-[270px] box-border rounded-full overflow-hidden border-none shadow-lg">
               <Image
                 src="/moses.png"
                 alt="Aniebiet Moses"
@@ -191,7 +196,7 @@ export default function HeroSection() {
             </div>
 
             {/* Second Avatar */}
-           <div className="absolute w-[230px] h-[144px] left-[48%] top-[51%] md:left-[51%] md:top-[42%] md:w-[267.27px] md:h-[174px] overflow-hidden">
+            <div className="absolute w-[200px] h-[144px] left-[40%] top-[51%] md:left-[51%] md:top-[42%] md:w-[267.27px] md:h-[174px] overflow-hidden">
               <Image
                 src="/chris.png"
                 alt="Mr. Chris"
@@ -203,7 +208,7 @@ export default function HeroSection() {
 
             <div className="absolute bottom-[10%] md:bottom-[10%] left-0 right-0 flex items-center justify-left ml-8 gap-3">
               <p
-                className="text-base leading-relaxed"
+                className="text-xs leading-relaxed"
                 style={{ color: "#6B6B6B" }}
               >
                 Join 100s of satisfied clients

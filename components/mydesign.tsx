@@ -58,21 +58,21 @@ export default function ProjectsSection() {
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:gap-10 sm:grid-cols-2 gap-12 sm:gap-3.5">
-        {projects.map((p, i) => (
-          <Link key={i} href={p.url} className="block">
-            <div
-              className="relative rounded-2xl overflow-hidden cursor-pointer"
-              style={{
-                aspectRatio: "1 / 1",
-                transition: "transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease",
-                transform: hovered === i ? "translateY(-6px) scale(1.02)" : "translateY(0) scale(1)",
-                boxShadow: hovered === i
-                  ? p.accent
-                    ? "0 20px 50px rgba(160,200,0,0.25), 0 8px 20px rgba(0,0,0,0.2)"
-                    : "0 20px 50px rgba(0,0,0,0.3)"
-                  : "0 2px 8px rgba(0,0,0,0.1)",
-              }}
+      <div className="grid grid-cols-1 md:gap-7 sm:grid-cols-2 gap-5 sm:gap-3.5">
+      {projects.map((p, i) => (
+  <Link key={i} href={p.url} className="block">
+    <div
+      className="relative rounded-2xl overflow-hidden cursor-pointer"
+      style={{
+        aspectRatio: "1 / 1",
+        transition: "transform 0.35s cubic-bezier(.22,.68,0,1.2), box-shadow 0.35s ease",
+        transform: hovered === i ? "translateY(-2px)" : "translateY(0)",
+        boxShadow: hovered === i
+          ? p.accent
+            ? "0 2px 8px rgba(160,200,0,0.1)"
+            : "0 2px 8px rgba(0,0,0,0.06)"
+          : "none",
+      }}
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
             >

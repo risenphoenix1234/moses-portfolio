@@ -98,7 +98,7 @@ export default function SkillsSection() {
         {/* Left: heading */}
         <div className="w-full lg:w-[35%] lg:shrink-0 lg:sticky md:items-center lg:top-24 flex flex-col gap-4">
           <h2
-            className="text-2xl sm:text-3xl md:text-[2.6rem] font-black md:leading-10 leading-[1.5] tracking-[-0.01em] mb-2 md:mb-5 word-spacing-wide"
+            className="text-2xl sm:text-3xl  md:text-[2.6rem] font-black md:leading-10 leading-[1.5] tracking-[-0.01em] mb-2 md:mb-1 word-spacing-wide"
             style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D", wordSpacing: "0.15em" }}
           >
             A comprehensive look at what I deliver and how  I deliver
@@ -109,7 +109,7 @@ export default function SkillsSection() {
         </div>
 
         {/* Right: 2x2 grid */}
-        <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-4">
+        <div className="w-full flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-6">
           {services.map((s, i) => (
             <div
               key={i}
