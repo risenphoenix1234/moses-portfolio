@@ -109,10 +109,10 @@ export default function HeroSection() {
         }}
       >
 
-        <section className="max-w-[1920px] mx-auto px-4 md:px-24 py-16 md:pt-24 flex sm:px-8 flex-col-reverse sm:flex-col-reverse md:mt-16 md:flex-row items-start gap-10 md:gap-12">
+        <section className="max-w-[1920px] w-full mx-auto lg  md:px-10 py-16 md:pt-24 px-8  flex sm:px-8 flex-col-reverse md:flex-col-reverse md:mt-16 lg:px-32 lg:flex-row items-start gap-10 md:gap-12">
 
           {/* LEFT */}
-          <div className="flex-1 text-center sm:mx-auto md:ml-8 sm:text-center md:px-10 md:w-[49.3%] md:text-left">
+          <div className="flex-1 text-center md:mx-auto md:text-center  lg:px-10 lg:w-[49.3%] lg:text-left">
 
             <div
               data-reveal="fade-left"
@@ -126,7 +126,7 @@ export default function HeroSection() {
             <h1
               data-reveal="fade-left"
               data-delay="100"
-              className="text-[2rem] md:text-[2.9rem] leading-[1.2] font-black mb-6 tracking-tight"
+              className="text-[2rem] lg:text-[2.9rem] leading-[1.2] font-black mb-6 tracking-tight"
               style={{ fontFamily: "'Playfair Display', serif", color: "#0D0D0D" }}
             >
               A creative product <br />designer
@@ -139,7 +139,7 @@ export default function HeroSection() {
             <p
               data-reveal="fade-left"
               data-delay="200"
-              className="text-base max-w-md leading-relaxed mb-8 mx-auto md:mx-0"
+              className="text-base max-w-lg leading-relaxed mb-8 mx-auto lg:mx-0"
               style={{ color: "#6B6B6B" }}
             >
               I help brands turn ideas into well-crafted digital products through
@@ -149,7 +149,7 @@ export default function HeroSection() {
             <div
               data-reveal="fade-left"
               data-delay="320"
-              className="flex items-center justify-center md:justify-start gap-4"
+              className="flex items-center justify-center lg:justify-start gap-4"
             >
 
               <a href="#footer"
@@ -173,7 +173,7 @@ export default function HeroSection() {
           < div
             data-reveal="fade-right"
             data-delay="250"
-            className="relative bg-[#FBFFF6] border border-l-gray-50 drop-shadow-sm rounded-xl w-full md:w-[45.2%] h-[600px] md:px-6 md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0  justify-center"
+            className="relative bg-[#FBFFF6] w-full sm:w-full border border-l-gray-50 drop-shadow-sm rounded-xl md:w-full lg:w-[45.2%] h-[600px] md:py-20 md:max-w-none shrink-0 mt-6 md:mt-0  justify-center"
           >
 
             {/* Floating Badge */}
